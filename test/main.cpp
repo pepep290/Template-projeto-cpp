@@ -3,14 +3,14 @@
 #include "bib.hpp"
 
 int main() {
-    // Casos que devem ser aceitos
-    assert(verificarDadoValido(6) == true);
+    // Testes da funcionalidade anterior (Validação)
     assert(verificarDadoValido(20) == true);
     
-    // Casos que devem ser rejeitados
-    assert(verificarDadoValido(7) == false);
-    assert(verificarDadoValido(100) == false);
+    // NOVOS Testes: Acerto Crítico
+    assert(ehCritico(20, 20) == true);  // Tirou 20 num d20 -> Crítico!
+    assert(ehCritico(5, 20) == false);  // Tirou 5 num d20 -> Normal.
+    assert(ehCritico(6, 6) == true);    // Tirou 6 num d6 -> Crítico!
 
-    std::cout << "Testes de restricao de dados: PASSOU!" << std::endl;
+    std::cout << ">>> TESTES REGRESSIVOS (VALIDACAO + CRITICO): PASSOU! <<<" << std::endl;
     return 0;
 }

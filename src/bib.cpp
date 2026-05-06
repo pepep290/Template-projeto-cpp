@@ -7,3 +7,7 @@ bool verificarDadoValido(int lados) {
     }
     return false;
 }
+
+bool ehCritico(int valorTirado, int lados) {
+    return valorTirado == lados;
+}
